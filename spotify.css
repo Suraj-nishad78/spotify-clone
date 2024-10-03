@@ -1,0 +1,488 @@
+body {
+    background-color:  black;
+    margin: 0px;
+    padding: 0;
+    font-size: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    color:  white;
+}
+/* -----------GRID FOR STYLING----------- */
+.container {
+    display: grid;
+    grid-template-areas: 
+    "aside primaryNavbar primaryNavbar"
+    "aside main main"
+    "Footer Footer Footer";
+    margin: 0px 10px 10px 10px;
+}
+#primary-navbar {
+    grid-area:primaryNavbar ;
+    /* width: 100%; */
+}
+#aside {
+    grid-area:aside;
+    width: 98%;
+    margin-right: .5rem;
+    height: 100%;
+    box-sizing: border-box;
+}
+#main {
+    grid-area:main;
+    width: 100%;
+    background-color: rgba(128, 128, 128, .2);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-bottom: 3.6rem;
+    /* margin-top: .2rem; */
+    box-sizing: border-box;
+}
+#footer {
+    grid-area:Footer;
+ }
+/* -----------NAVBAR----------- */
+.navbar{
+    position: sticky;
+    top: 0rem;
+    z-index: 999;
+    background-color: black;
+}
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(128, 128, 128, .1);
+    height: 3.8rem;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    box-sizing: border-box;
+}
+.front-back-icon{
+    box-sizing: border-box;
+}
+.front-back-icon i{
+    font-size: 1.5rem;
+    padding:.5rem .65rem;
+    margin: .5rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.2rem;
+    background-color: rgba(128, 128, 128, .2);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+}
+.profile {
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1rem;/
+}
+.profile #sign-up{
+    font-size: 1rem;    
+    margin: 1rem 1.8rem;
+    padding: .3rem;
+}
+.profile #log-in{
+    margin-top: .4rem;
+    font-size: 1rem;
+    padding: .8rem 1.8rem;
+    border: 1px solid black;
+    border-radius: 25px;
+    height: 1.5rem;
+    width: 3.5rem;    
+    background-color: white;
+}
+.profile #log-in h3{
+    color: black;
+    font-size: bold;
+}
+.profile #sign-up h3:hover{
+    text-decoration: underline;
+    color: gray;
+    transform:scale(1.05) ;
+}
+.profile #log-in:hover {
+    transform:scale(1.05) ;
+}
+/* -----------ASIDE----------- */
+.aside-fixed{
+    position: sticky;
+    top: .2rem;
+}
+/* -----------HOME & SEARCH----------- */
+.home-search {
+    background-color: rgba(128, 128, 128, .2);
+    height:10rem;
+    position: relative;
+    border-radius: 8px;
+}
+.spotify {
+    position: relative;
+    top: 1.2rem;
+    left: 1.5rem;
+    margin-bottom: 1.3rem;
+}
+.spotify i{
+    font-size: 1.5rem;
+    margin-right: .5rem;
+}
+.spotify span{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.home {
+    position: relative;
+    top: 1.5rem;
+    left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.home i{
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+.home span{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.search {
+    position: relative;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+.search i{
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    color:rgba(255, 255, 255, .5);
+}
+.search span{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color:rgba(255, 255, 255, .5);
+}
+/* -----------LIBRARY----------- */
+.library {
+    margin-top: .5rem;
+    padding: .5rem;
+    background-color: rgba(128, 128, 128, .2);
+    height: 21.5rem;
+    border-radius: 8px;
+}
+.library-section {
+    display: flex;
+    justify-content: space-between;
+}
+.your-library i{
+    font-size: 1.3rem;
+}
+.your-library span{
+    font-size: 1.1rem;
+    font-size: bold;
+    position: relative;
+    left: .8rem;
+}
+.create-playlist:hover .create-new-playlist {
+    display: block;
+    box-sizing: border-box;
+}
+.create-playlist i{
+    font-size: 1.5rem;
+}
+.create-new-playlist {
+    position: absolute;
+    left: 4%;
+    display: none;
+    border: 1px solid transparent;
+    width: 12rem;
+    height: 2rem;
+    background-color: rgba(128, 128, 128, .2);
+    padding: .3rem;
+    border-radius: 4px;
+}
+.create-new-playlist i{
+    font-size: 1.2rem;
+}
+.create-new-playlist span{
+    font-size: 1rem;
+    position: relative;
+    left: .6rem;
+    font-weight: bold;
+}
+/* -----------LIBRARY-BTN----------- */
+.library-btn{
+    margin-top: 1.5rem;
+    padding: .2rem;
+    width: 90%;
+    height: 9.2rem;
+    /* background-color: rgba(128, 128, 128, .2); */
+    /* overflow-y: scroll; */
+
+}
+.btn-1{
+    margin-bottom: 1rem;
+}
+.btn-1 h3{
+    font-size: .7rem;
+    margin-bottom: .5rem;
+}
+.btn-1 p{
+    font-size: .7rem;
+    margin-bottom: 1rem;
+}
+.btn-1 span{
+    font-size: .7rem;
+    color: black;
+    border: 1px solid  transparent;
+    background-color: white;
+    padding: .5rem;
+    border-radius: 25px;
+    font-weight: bold;
+}
+/* -----------ASIDE ITEM----------- */
+.aside-bottom{
+    margin-top: .8rem;
+}
+.aside-item{
+    margin-bottom: 1rem;
+}
+.aside-item ul{
+    display: grid;
+    grid-template-columns: 3rem 5.5rem 3rem;
+    row-gap: .5rem;
+}
+.aside-item ul li{
+    list-style: none;
+    font-size: .8rem;
+    color: rgba(255, 255, 255, .5);
+}
+.aside-bottom span {
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: .4rem .6rem;
+    border-radius: 25px;
+    font-weight: bold;
+}
+/* -----------MAIN----------- */
+/* -----------ARTISTS----------- */
+#artists {
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    height: 18rem;
+}
+.artists-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.artists-heading h1{
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+.artists-heading h1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.artists-heading h3{
+    font-size: 1rem;
+    position: relative;
+    top: .8rem;
+    color: rgba(255, 255, 255, .6);
+}
+.artists-heading h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.artists-title {
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    cursor: pointer;
+    
+}
+.artist-name{
+    max-width: 10rem;
+}
+.artist-name:hover{
+    height: 13rem;
+    width: 10.5rem;
+    border-radius: 8px;
+    background-color: rgba(128, 128, 128, .1);
+}
+.artist-name img{
+    margin: .8rem;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    margin-bottom: .5rem;
+    /* text-align: center; */
+}
+.artist-name h3{
+    font-size: 1rem;
+    position: relative;
+    left: 1.2rem;
+}
+.artist-name span{
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .6);
+    position: relative;
+    left: 1.2rem;
+}
+/* -----------PLAY-BUTTON --------*/
+.artist-play-btn {
+    position: relative;
+}
+.artist-play-btn:hover .play-btn{
+    display: block;
+    transition: all .2s ease-in-out;
+}
+.play-btn {
+    border: 1px solid transparent;
+    height: 3rem;
+    width: 3rem;
+    background-color:#1bd363;
+    border-radius: 50%;
+    position: absolute;
+    top: 6rem;
+    right: 1rem;
+    display: none;
+    animation: play .2s ease-out forwards ;
+}
+@keyframes play {
+    from {
+        top: 6.8rem;
+    }
+    to {
+        top: 6rem;
+    }
+}
+.play-btn i{
+    font-size: 1.8rem;
+    color: black;
+    padding: .6rem 1rem;
+}
+/*----------- ALBUM ----------*/
+.album-name{
+    max-width:10rem;
+}
+.album-name:hover{
+    height: 15rem;
+    width: 10.5rem;
+    border-radius: 8px;
+    background-color: rgba(128, 128, 128, .1);
+}
+.album-name img{
+    margin: .8rem .5rem;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 8px;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+.album-name h3{
+    font-size: 1rem;
+    position: relative;
+    left: .5rem;
+}
+.album-name span{
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .6);
+    position: relative;
+    left: .5rem;
+}
+/*----------- ABOUT ----------*/
+.about-us {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+}
+.about-details h3{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+.about-details ul li{
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+    color:rgba(255, 255, 255, .6);
+    list-style: none;
+}
+.about-details ul li:hover{
+    text-decoration: underline;
+    color: white;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.Social-links ul{
+    display: flex;
+    justify-content: space-between;
+}
+.Social-links ul li {
+    border: 1px solid transparent;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, .2);
+    list-style: none;
+    margin-right: .7rem;
+}
+.Social-links ul li i{
+    font-size: 1.2rem;
+    padding: .4rem .4rem;
+}
+.Social-links ul li:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, .7);
+    transition: all .3s ease-in-out;
+}
+#colosure {
+    margin: 0rem  2rem;
+}
+#colosure p{
+    margin: 3rem 0rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, .6);
+}
+/*----------- FOOTER ----------*/
+.footer-bottom{
+    /* margin-top: .4rem; */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-image: linear-gradient(to right, purple,skyblue );
+    height: 2rem;
+    width: 96%;
+    position:fixed;
+    bottom: 0rem;
+    /* margin-bottom: .2rem; */
+}
+.footer-title h3{
+    font-size: 1.1rem;
+}
+.footer-title p{
+    font-size: 1.2rem;
+}
+.footer-btn{
+    border: 1px solid transparent;
+    height: 3rem;
+    width: 9rem;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    top: -.4rem;
+}
+.footer-btn:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+.footer-btn span{
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bolder;
+    position: relative;
+    top: .7rem;
+    left: 1.4rem;
+}
